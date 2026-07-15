@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memória Multijogador 8×5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Memória Multijogador <span class="subtitle">8×5</span></h1>
+      <div class="controls">
+        <div class="lobby">
+          <input id="playerName" placeholder="Seu nome" />
+          <button id="createBtn" class="btn">Criar jogo</button>
+          <input id="joinGameId" placeholder="ID do jogo" style="width:86px" />
+          <button id="joinBtn" class="btn btn-ghost">Entrar</button>
+        </div>
+        <div class="stats">
+          <span>Você: <strong id="meName">—</strong></span>
+          <span>Jogador 1: <strong id="p1">—</strong></span>
+          <span>Jogador 2: <strong id="p2">—</strong></span>
+          <span>Vez de: <strong id="turn">—</strong></span>
+          <span>Movs: <strong id="moves">0</strong></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Polling em background — jogo para 2 jogadores. LocalStorage guarda sua sessão.</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
